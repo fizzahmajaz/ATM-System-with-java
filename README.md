@@ -1,81 +1,55 @@
-# ATM-System-with-java
-This project is a simple ATM simulator where users can check their balance, deposit money, withdraw money, or exit. It keeps asking for actions until the user chooses to exit. The program also checks for invalid inputs and insufficient balance.
+# 🏦 ATM Simulator — How it Works (Without Code)
+1. Start the Program
+Show a welcome message to the user:
+➔ "Welcome to the ATM!"
 
+2. Display the Menu
+Present options like:
 
+Press 1 ➔ Check Balance
 
-1. Scanner is created:
-java
-Copy
-Edit
-Scanner sc = new Scanner(System.in);
-We create a Scanner object to take user input.
+Press 2 ➔ Deposit Money
 
-2. Initial balance and PIN are set:
-java
-Copy
-Edit
-double balance = 1000.00;
-int pin = 1234;
-We assume the user already has ₨1000 in the ATM.
+Press 3 ➔ Withdraw Money
 
-PIN is set as 1234 (like a password).
+Press 4 ➔ Exit
 
-3. User is asked to enter the PIN:
-java
-Copy
-Edit
-System.out.println("Enter your PIN: ");
-enteredPin = sc.nextInt();
-The program asks the user to type their PIN.
+3. Ask the User for a Choice
+Ask: "Please enter your choice:"
 
-4. PIN Checking:
-java
-Copy
-Edit
-if (enteredPin == pin) {
-If the entered PIN matches the correct PIN, the user is allowed to continue.
+<b>4. Based on the Choice:</b>
+If user presses 1:
+➔ Show the current balance.
 
-Otherwise, they are shown "Access Denied" and program ends.
+If user presses 2:
+➔ Ask "How much would you like to deposit?"
+➔ Add the deposit amount to the balance.
+➔ Show new balance.
 
-5. Main Menu Loop:
-java
-Copy
-Edit
-while (choice != 4) {
-The menu will keep showing (again and again) until the user chooses Exit (option 4).
+If user presses 3:
+➔ Ask "How much would you like to withdraw?"
+➔ Check if the balance is enough:
 
-The user sees a menu:
+If yes, subtract the amount and show the new balance.
 
-Check Balance
+If no, show "Insufficient funds."
 
-Deposit Money
+If user presses 4:
+➔ Show "Thank you for using the ATM!" and stop the program.
 
-Withdraw Money
+If user presses anything else:
+➔ Show "Invalid choice. Please try again."
+➔ Show the menu again.
 
-Exit
+5. Keep Repeating
+After each action (check, deposit, withdraw),
+➔ Show the menu again until the user presses 4 (Exit).
 
-6. Based on user's choice:
-If choice == 1 → Show current balance.
+✨ Main Things You Are Practicing
+Looping (keep showing the menu)
 
-If choice == 2 → Ask for deposit amount and add it to the balance.
+Conditions (handling different choices)
 
-If choice == 3 → Ask for withdrawal amount:
+Variables (managing balance)
 
-If sufficient money is available, subtract it.
-
-If not, show "Insufficient Funds" message.
-
-If choice == 4 → Exit the program politely.
-
-If anything else, say "Invalid Option".
-
-7. Scanner is closed:
-java
-Copy
-Edit
-sc.close();
-After everything, we close the scanner to save memory.
-
-Summary in simple words:
-The code first checks the PIN. If the PIN is correct, it shows a menu. The user can check balance, deposit, or withdraw money until they exit. The balance updates correctly after each action.
-
+Input/output (asking and showing information)
